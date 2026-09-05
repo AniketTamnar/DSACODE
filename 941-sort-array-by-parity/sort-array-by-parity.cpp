@@ -7,19 +7,19 @@ public:
 
         while(start<end){
             if(nums[start]%2==0 && nums[end]%2==1){
-                start+=1;
-                end-=1;
+                start++;
+                end--;
             
             }else if(nums[start]%2==0 && nums[end]%2==0){
-                 start+=1;
+                 start++;
             }else if(nums[start]%2==1&& nums[end]%2==1){
-                end-=1;
+                end--;
             }else{
                 int temp =nums[start];
                 nums[start]=nums[end];
                 nums[end]=temp;
-              start+=1;
-                end-=1;
+              start++;
+                end--;
             }
         }
         return nums;
